@@ -18,6 +18,10 @@ A macOS menu bar app that shows your current or upcoming class from your calenda
 
     swift run // in the root directory
 
+## How to kill it
+
+    pkill headsUp // in the root directory
+
 ## Package as a .app
 
     ./build-app.sh
