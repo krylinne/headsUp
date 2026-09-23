@@ -1,13 +1,19 @@
 #!/bin/bash
 set -e
 
+APP_NAME="headsUp"
+BUNDLE_ID="com.krylinne.headsup"
+SIGNING_IDENTITY="krylinne"
+
 swift build -c release
 
-rm -rf headsUp.app
-mkdir -p headsUp.app/Contents/MacOS
-cp .build/release/headsUp headsUp.app/Contents/MacOS/headsUp
-cp Info.plist headsUp.app/Contents/Info.plist
+rm -rf "${APP_NAME}.app"
+mkdir -p "${APP_NAME}.app/Contents/MacOS"
+cp .build/release/${APP_NAME} "${APP_NAME}.app/Contents/MacOS/${APP_NAME}"
+cp Info.plist "${APP_NAME}.app/Contents/Info.plist"
 
-codesign --force --deep --sign - headsUp.app
+codesign --force --deep --sign "${SIGNING_IDENTITY}" \
+  -r="designated => identifier \"${BUNDLE_ID}\"" \
+  "${APP_NAME}.app"
 
-echo "Built headsUp.app"
+echo "Built and signed ${APP_NAME}.app"
