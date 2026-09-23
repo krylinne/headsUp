@@ -16,7 +16,7 @@ A macOS menu bar app that shows your current or upcoming class from your calenda
 
 ## Build & Run
 
-    swift run
+    swift run // in the root directory
 
 ## Package as a .app
 
