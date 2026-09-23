@@ -20,7 +20,7 @@ A macOS menu bar app that shows your current or upcoming class from your calenda
 
 ## How to kill it
 
-    pkill headsUp // in the root directory
+    pkill headsUp
 
 ## Package as a .app
 
