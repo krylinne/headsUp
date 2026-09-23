@@ -5,3 +5,6 @@
 *.dSYM/
 .swiftpm/
 Package.resolved
+*.key
+*.crt
+*.p12
