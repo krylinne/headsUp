@@ -1,0 +1,7 @@
+.build/
+*.app/
+*.zip
+.DS_Store
+*.dSYM/
+.swiftpm/
+Package.resolved
